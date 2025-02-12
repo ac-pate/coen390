@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnEvent1, btnEvent2, btnEvent3;
 
     private SharedPreferenceHelper sharedPreferenceHelper;
-    private static final String PREFS_NAME = "EventPrefs";
     protected int counter1=0;
     protected int counter2=0;
     protected int counter3=0;
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (settings == null) {
             // Redirect to Settings activity if no profile info is available
-//            launchSettings(v);
+            launchSettings(v);
         } else {
             // Display profile name on the button
             btnEvent1.setText(settings.getButton1Name());
@@ -86,17 +85,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         // Save the counter values in SharedPreferences
         sharedPreferenceHelper.saveCounters(counter1, counter2, counter3, counterTotal);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            startActivity(new Intent(this, SettingsActivity.class));
-            Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show(); // bottom of the screen for a short duration.
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     //launch SettingsActivity as it acts like an event handler

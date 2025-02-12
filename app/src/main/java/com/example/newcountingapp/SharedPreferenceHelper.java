@@ -18,10 +18,10 @@ public class SharedPreferenceHelper {
     public void saveSettings(Settings settings) {
         SharedPreferences.Editor editor = preferences.edit();
         //saving input fields from the SettingsActivity by retrieving it from the settings
-        editor.putString("countName1", settings.getButton1Name());
-        editor.putString("countName2", settings.getButton2Name());
-        editor.putString("countName3", settings.getButton3Name());
-        editor.putInt("countMax",settings.getMaxCount());
+        editor.putString("button1Name", settings.getButton1Name());
+        editor.putString("button2Name", settings.getButton2Name());
+        editor.putString("button3Name", settings.getButton3Name());
+        editor.putInt("maxCount",settings.getMaxCount());
         editor.commit();
     }
 

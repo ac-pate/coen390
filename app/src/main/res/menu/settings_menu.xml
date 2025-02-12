@@ -2,15 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/action_edit"
-        android:icon="@drawable/ic_edit"
-        android:title="Edit"
-        app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/action_save"
-        android:icon="@drawable/ic_save"
-        android:title="Save"
-        app:showAsAction="ifRoom"/>
+        android:id="@+id/menuEditSettings"
+        android:enabled="true"
+        android:onClick="editSettings"
+        android:title="@string/menu_settings"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuClearSettings"
+        android:enabled="true"
+        android:onClick="clearSettings"
+        android:title="@string/ClearSettings"
+        android:visible="true" />
+
 </menu>

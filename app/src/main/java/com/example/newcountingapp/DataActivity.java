@@ -103,7 +103,7 @@ public class DataActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         isEventName=!isEventName;
-        if (item.getItemId() == R.id.action_ToggleEvents) {
+        if (item.getItemId() == R.id.menuToggleEvents) {
             //if flag isEventName is true, turn on name mode otherwise button mode
             if(isEventName) {
                 eventNameMode();

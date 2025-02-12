@@ -121,6 +121,7 @@
         android:layout_height="52dp"
         android:layout_marginBottom="32dp"
         android:text="Total Count: "
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/counts"
         app:layout_constraintEnd_toEndOf="parent"

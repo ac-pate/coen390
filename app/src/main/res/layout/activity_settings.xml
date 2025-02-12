@@ -6,7 +6,29 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     android:id="@+id/mainToolbar"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingsActivity"
+    tools:menu="@menu/settings_menu">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSettings"
+        android:layout_width="413dp"
+        android:layout_height="70dp"
+        android:background="?attr/colorPrimary"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:keyboardNavigationCluster="false"
+        android:longClickable="false"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/settings_menu"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:subtitleTextColor="#040404"
+        app:title="Settings"
+        app:titleTextColor="@color/black" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="415dp"
@@ -25,6 +47,7 @@
             android:layout_marginTop="64dp"
             android:text="Button3 Name"
             android:textSize="24sp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +60,7 @@
             android:layout_marginTop="64dp"
             android:text="Max Count"
             android:textSize="24sp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.09"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +71,7 @@
             android:layout_width="375dp"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
+            android:digits="@string/TextLimit"
             android:hint="@string/Hint"
             android:maxLength="20"
             android:maxLines="1"
@@ -74,6 +99,7 @@
             android:layout_marginTop="64dp"
             android:text="Button2 Name"
             android:textSize="24sp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +110,7 @@
             android:layout_width="375dp"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
+            android:digits="@string/TextLimit"
             android:hint="@string/Hint"
             android:maxLength="20"
             android:maxLines="1"
@@ -99,6 +126,7 @@
             android:layout_marginTop="16dp"
             android:text="Button1 Name"
             android:textSize="24sp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +137,7 @@
             android:layout_width="375dp"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
+            android:digits="@string/TextLimit"
             android:hint="@string/Hint"
             android:maxLength="20"
             android:maxLines="1"
@@ -118,7 +147,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewC1" />
 
         <Button
-            android:id="@+id/btn_saveSettings"
+            android:id="@+id/saveSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="68dp"
@@ -130,16 +159,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarSettings"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:title="Settings"
-        app:navigationIcon="@drawable/baseline_arrow_back_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

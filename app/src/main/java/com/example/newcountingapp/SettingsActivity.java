@@ -38,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
         button2Name = findViewById(R.id.textInputC2);
         button3Name = findViewById(R.id.textInputC3);
         maxCount = findViewById(R.id.textInputCountMax);
-        saveButton = findViewById(R.id.btn_saveSettings);
+        saveButton = findViewById(R.id.saveSettings);
 
         sharedPreferenceHelper = new SharedPreferenceHelper(this);
 
@@ -49,6 +49,11 @@ public class SettingsActivity extends AppCompatActivity {
         // Enable the "top Left" (back) button
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
+        toolbar.setOverflowIcon(getDrawable(R.drawable.round_more_vert_24));
+
+        //turn on display mode
+        displaySettings();
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainToolbar), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -57,7 +62,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
-    private void saveSettings(View v) {
+    public void saveSettings(View v) {
 
         String count1 = button1Name.getText().toString();
         String count2 = button2Name.getText().toString();
@@ -91,6 +96,18 @@ public class SettingsActivity extends AppCompatActivity {
         return true;
     }
 
+    //edit setting mode
+    public boolean editSettings(MenuItem item) {
+        //make the input fields editable and make save button visible
+        button1Name.setEnabled(true);
+        button2Name.setEnabled(true);
+        button3Name.setEnabled(true);
+        maxCount.setEnabled(true);
+        saveButton.setEnabled(true);
+        saveButton.setVisibility(View.VISIBLE);
+        return true;
+    }
+
     public void displaySettings() {
         // check if any setting is saved
         if(sharedPreferenceHelper.getSettings() != null) {
@@ -106,7 +123,7 @@ public class SettingsActivity extends AppCompatActivity {
             button3Name.setEnabled(false);
             maxCount.setEnabled(false);
             saveButton.setEnabled(false);
-            saveButton.setVisibility(View.GONE);
+            saveButton.setVisibility(View.INVISIBLE);
         }
     }
 
