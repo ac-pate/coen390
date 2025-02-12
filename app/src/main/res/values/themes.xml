@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.NewCountingApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Customize the status bar color -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/windowBackground</item>
+    </style>
+
+    <!-- Theme for NewCountingApp, inheriting from Base -->
+    <style name="Theme.NewCountingApp" parent="Base.Theme.NewCountingApp">
+        <!-- Apply button style and other UI customizations -->
+        <item name="buttonStyle">@style/ButtonStyle</item>
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+    </style>
+</resources>
